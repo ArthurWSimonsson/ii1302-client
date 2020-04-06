@@ -1,0 +1,15 @@
+.button {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: darkcyan;
+    text-decoration: none;
+    padding: 5px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.linkDiv {
+    margin: 10px
+}
