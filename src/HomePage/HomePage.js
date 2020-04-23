@@ -14,7 +14,7 @@ function HomePage() {
 
     useEffect(() => {
         dispatch(messageActions.welcomeMessage());
-        console.log('test',welcomeMessage)
+        // console.log('test',welcomeMessage)
     }, []);
 
     // Office hours are 9:00 to 15:00.

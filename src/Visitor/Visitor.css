@@ -36,3 +36,7 @@
     min-width: 150px;
     width: 40%;
 }
+
+.button {
+    cursor:pointer;
+}

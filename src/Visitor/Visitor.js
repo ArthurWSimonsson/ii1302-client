@@ -30,11 +30,13 @@ function Visitor (props) {
         messageDoc.title = evt.target.title.value;
         messageDoc.message = evt.target.message.value;
         messageDoc.read = false;
-        // messageService.leaveMessage(messageDoc)
+        messageService.leaveMessage(messageDoc)
         // const data = new FormData(evt.target);
         // console.log('evt', evt.target[2].value)
         // console.log('evt', evt.target.message.value)
         console.log('test', messageDoc)
+
+        props.history.push('/')
         // setName(evt)
         // setName(evt)
         // console.log(name)
@@ -57,7 +59,7 @@ function Visitor (props) {
                     <input className = 'authorInput' name = 'author' type = 'text' placeholder='Author' required></input>
                     <input className = 'titleInput' name = 'title' type = 'text' placeholder='Title' required></input>
                     <textarea className = 'messageInput' name = 'message' type = 'text' placeholder='Leave message...' required></textarea>
-                    <input className = "button" type='submit' text='Submit'/>
+                    <input className = "button" type='submit' value='Submit'></input>
                     {/* <Link to = '/' className = "button" type ='submit'>Submit</Link> */}
                 </form>
             </div>
