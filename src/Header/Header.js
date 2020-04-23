@@ -17,7 +17,7 @@ function Header() {
         <div className = "headerButtonDiv">
             
             <Link to = '/' className = "logInButton" >Home</Link>
-            <Link className = "logInButton" >Edit</Link>
+            <Link to = '/edit' className = "logInButton" >Edit</Link>
             <Link className = "logInButton" >New</Link>
             <Link className = "logInButton" >All</Link>
             <button className = "logInButton">Sign out</button>

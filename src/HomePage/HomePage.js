@@ -13,6 +13,7 @@ function HomePage() {
 
 
     useEffect(() => {
+        console.log('home', welcomeMessage)
         dispatch(messageActions.welcomeMessage());
         // console.log('test',welcomeMessage)
     }, []);

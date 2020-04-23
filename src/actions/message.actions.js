@@ -14,7 +14,7 @@ function welcomeMessage () {
         messageService.getWelcome()
             .then(
                 message => { 
-                    console.log('mes', message);
+                    // console.log('mes', message);
                     dispatch({type: messageConstants.WELCOME, message});
                 },
             );

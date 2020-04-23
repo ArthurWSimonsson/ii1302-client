@@ -5,13 +5,16 @@ import './App.css';
 import {HomePage} from '../HomePage'
 import {Header} from '../Header'
 import {Visitor} from '../Visitor'
+import {EditPage} from '../EditPage'
+
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Switch>
+      <Switch>        
         <Route path="/visitor" component={Visitor}/>
+        <Route path="/edit" component={EditPage}/>
         <Route path="/" component={HomePage} />
       </Switch>  
     </div>

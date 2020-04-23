@@ -22,7 +22,7 @@ function Visitor (props) {
 
 
     const handleSubmit = (evt) => {
-        evt.preventDefault()    
+        // evt.preventDefault()    
         var messageDoc = {};
 
         messageDoc.date = formatDate();
@@ -34,7 +34,7 @@ function Visitor (props) {
         // const data = new FormData(evt.target);
         // console.log('evt', evt.target[2].value)
         // console.log('evt', evt.target.message.value)
-        console.log('test', messageDoc)
+        // console.log('test', messageDoc)
 
         props.history.push('/')
         // setName(evt)
