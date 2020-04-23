@@ -1,8 +1,45 @@
-#messageBox {
+.messageBox {
+    display: flex;
+    align-items: center;
     border: solid;
-    color : white
+    color : white;
+    width: 400px;
+    height: 200px;
+    margin: 30px;
 }
 
-#messageBoxText {
-    padding: 10px
+.messageBoxText {
+    margin: 10px;
+    width: 100%;
+    font-size: 20px;
+    overflow: scroll;
+}
+
+.homePage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+}
+
+.title {
+    color: white;
+    font-size: 25px;
+}
+
+.button {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: darkcyan;
+    text-decoration: none;
+    padding: 5px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.linkDiv {
+    margin: 10px
 }

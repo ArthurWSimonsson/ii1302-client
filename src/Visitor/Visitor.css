@@ -1,0 +1,38 @@
+/* top right bottom left */
+
+.visitorMainDiv {
+    background-color: #282c34;
+    min-height: 100vh;
+}
+
+.title {
+    color: white;
+    font-size: 25px;
+}
+
+.leaveMessageForm {
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+
+.authorInput {
+    margin: 20px 20px 0px 20px;
+    width: 40%;
+}
+
+.messageInput {
+    margin: 0px 20px 20px 20px;
+    width: 40%;
+    min-width: 150px;
+    min-height: 200px;
+    padding: 5px;
+    font-size: small;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.titleInput {
+    margin: 20px;
+    min-width: 150px;
+    width: 40%;
+}

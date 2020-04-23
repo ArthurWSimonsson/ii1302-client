@@ -1,0 +1,29 @@
+.headerDiv {
+    background-color: white;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+  }
+
+.logInButton {
+    /* height: 27px; */
+    min-width: 100px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: darkcyan;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.headerButtonDiv {
+    display: flex;
+}
