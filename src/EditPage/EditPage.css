@@ -8,6 +8,9 @@
     width: 40%;
     min-width: 150px;
     min-height: 200px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: small;
+    padding: 5px;
 }
 
 .leaveMessageForm {

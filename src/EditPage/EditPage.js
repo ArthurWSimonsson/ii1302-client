@@ -12,13 +12,13 @@ function EditPage(props) {
     const dispatch = useDispatch();
 
     const handleSubmit = (evt) => {
-        evt.preventDefault()    
+        // evt.preventDefault()    
         var messageDoc = {};
 
         messageDoc.message = evt.target.message.value;
-        messageService.changeWelcome(messageDoc);
+        messageService.changeWelcome(messageDoc).then(dispatch(messageActions.welcomeMessage()));
 
-        dispatch(messageActions.welcomeMessage())
+        // dispatch(messageActions.welcomeMessage())
 
         props.history.push('/')
     }
@@ -26,9 +26,9 @@ function EditPage(props) {
     return(
     <div className = "EditPageMainDiv">
         <form className = 'leaveMessageForm' onSubmit={handleSubmit}>
-            <p className = "title">Edit</p>
+            <p className = "title">Edit home message</p>
             <textarea className = 'newWelcomeInput' name = 'message' type = 'text' placeholder='Leave new home screen message.' required></textarea>
-            <input className = "button" type='submit' value='Submit'></input>
+            <input className = "button" type='submit' value='Change'></input>
             {/* <Link to = '/' className = "button" type ='submit'>Submit</Link> */}
         </form>
     </div>

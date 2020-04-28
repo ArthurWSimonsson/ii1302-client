@@ -6,6 +6,7 @@ import {HomePage} from '../HomePage'
 import {Header} from '../Header'
 import {Visitor} from '../Visitor'
 import {EditPage} from '../EditPage'
+import {PrivateRoute } from '../Components';
 
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>        
+        <Route path="/" exact component={HomePage} />
         <Route path="/visitor" component={Visitor}/>
-        <Route path="/edit" component={EditPage}/>
-        <Route path="/" component={HomePage} />
+        <PrivateRoute path="/edit" component={EditPage}/>
       </Switch>  
     </div>
   );

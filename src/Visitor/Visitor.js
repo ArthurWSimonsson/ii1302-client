@@ -58,7 +58,7 @@ function Visitor (props) {
                     <p className = "title">Leave a message</p>
                     <input className = 'authorInput' name = 'author' type = 'text' placeholder='Author' required></input>
                     <input className = 'titleInput' name = 'title' type = 'text' placeholder='Title' required></input>
-                    <textarea className = 'messageInput' name = 'message' type = 'text' placeholder='Leave message...' required></textarea>
+                    <textarea className = 'messageInput' name = 'message' type = 'text' placeholder='Please leave a message.' required></textarea>
                     <input className = "button" type='submit' value='Submit'></input>
                     {/* <Link to = '/' className = "button" type ='submit'>Submit</Link> */}
                 </form>

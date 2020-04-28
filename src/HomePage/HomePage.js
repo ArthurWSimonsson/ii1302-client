@@ -9,16 +9,16 @@ import '../Common.css';
 function HomePage() {
 
     const welcomeMessage = useSelector(state => state.message);
+    const user = useSelector(state => state.user);
     const dispatch = useDispatch();
 
 
     useEffect(() => {
-        console.log('home', welcomeMessage)
         dispatch(messageActions.welcomeMessage());
-        // console.log('test',welcomeMessage)
     }, []);
 
     // Office hours are 9:00 to 15:00.
+      
 
     return(
     <div className = "homePage">
@@ -26,7 +26,7 @@ function HomePage() {
             <p className = "title">Welcome</p>
         </div>
         <div className = "messageBox">
-            <p className = "messageBoxText">{welcomeMessage}</p>
+            <p className = "messageBoxText">{welcomeMessage.message}</p>
         </div>
         <div className = "linkDiv">
             <Link className = "button" to="/visitor">Leave a message</Link>

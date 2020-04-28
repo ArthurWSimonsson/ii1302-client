@@ -36,9 +36,10 @@ function changeWelcome(message) {
     // console.log('service', requestOptions)
 
     return fetch(`https://ii1302-server.eu-gb.mybluemix.net/api/message/welcome`, requestOptions)
-    .then((response) => {
-        return response.json();
-    })
+    // .then((response) => {
+    //     console.log('json', response)
+    //     return JSON.parse(response) //response.json();
+    // })
     .then((data) => {
      return data
     });
@@ -57,9 +58,9 @@ function leaveMessage(message) {
     // console.log('service', requestOptions)
 
     return fetch(`https://ii1302-server.eu-gb.mybluemix.net/api/message/`, requestOptions)
-    .then((response) => {
-        return response.json();
-    })
+    // .then((response) => {
+    //     return response.json();
+    // })
     .then((data) => {
      return data
     });
