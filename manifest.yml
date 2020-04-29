@@ -1,6 +1,6 @@
 ---
 applications:
-- name: ii1302-server
+- name: ii1302-client
 path: build/
 memory: 64M
 instances: 1
