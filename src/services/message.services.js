@@ -1,6 +1,7 @@
 export const messageService = {
     getWelcome,
-    leaveMessage
+    leaveMessage,
+    getLog
 };
 
 // const myHeaders = new Headers({
@@ -40,5 +41,15 @@ function leaveMessage(message) {
     })
     .then((data) => {
      return data
+    });
+}
+
+function getLog(){
+    return fetch('https://ii1302-server.eu-gb.mybluemix.net/api/message/all')
+    .then(response=>{
+        return response.json();
+    })
+    .then(data=>{
+        return data
     });
 }

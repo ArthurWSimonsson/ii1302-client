@@ -18,8 +18,8 @@ function Header() {
             
             <Link to = '/' className = "logInButton" >Home</Link>
             <Link className = "logInButton" >Edit</Link>
-            <Link className = "logInButton" >New</Link>
-            <Link className = "logInButton" >All</Link>
+            <Link to = '/new' className = "logInButton" >New</Link>
+            <Link to = '/all' className = "logInButton" >All</Link>
             <button className = "logInButton">Sign out</button>
         </div> 
     }

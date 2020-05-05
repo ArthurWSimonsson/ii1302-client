@@ -2,7 +2,8 @@ import { messageConstants } from '../constants';
 import { messageService } from '../services';
 
 export const messageActions = {
-    welcomeMessage
+    welcomeMessage,
+    getPosts
 };
 
 function welcomeMessage () {
@@ -20,4 +21,16 @@ function welcomeMessage () {
             );
     };
 
+}
+
+function getPosts(){
+    return dispatch=>{
+        messageService.getLog()
+            .then(
+                message=>{
+                    console.log('mes', message);
+                    dispatch({type: messageConstants.POSTS, message});
+                },
+            )
+    };
 }
