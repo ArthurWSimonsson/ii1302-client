@@ -1,7 +1,7 @@
 export const messageService = {
     getWelcome,
     leaveMessage,
-    getLog
+    changeWelcome
 };
 
 // const myHeaders = new Headers({
@@ -23,6 +23,28 @@ function getWelcome() {
     });
 }
 
+function changeWelcome(message) {
+    // console.log('service', message)
+    const requestOptions = {
+        method: 'PUT',    
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(message)
+    };
+    // console.log('service', requestOptions)
+
+    return fetch(`https://ii1302-server.eu-gb.mybluemix.net/api/message/welcome`, requestOptions)
+    // .then((response) => {
+    //     console.log('json', response)
+    //     return JSON.parse(response) //response.json();
+    // })
+    .then((data) => {
+     return data
+    });
+}
+
 function leaveMessage(message) {
     // console.log('service', message)
     const requestOptions = {
@@ -33,23 +55,13 @@ function leaveMessage(message) {
         },
         body: JSON.stringify(message)
     };
-    console.log('service', requestOptions)
+    // console.log('service', requestOptions)
 
     return fetch(`https://ii1302-server.eu-gb.mybluemix.net/api/message/`, requestOptions)
-    .then((response) => {
-        return response.json();
-    })
+    // .then((response) => {
+    //     return response.json();
+    // })
     .then((data) => {
      return data
-    });
-}
-
-function getLog(){
-    return fetch('https://ii1302-server.eu-gb.mybluemix.net/api/message/all')
-    .then(response=>{
-        return response.json();
-    })
-    .then(data=>{
-        return data
     });
 }

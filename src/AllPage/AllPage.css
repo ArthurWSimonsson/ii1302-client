@@ -40,6 +40,10 @@ table{
     border-radius: 5px;
 }
 
+tr:hover td { 
+    background-color: dodgerblue;
+}
+
 th {
     background-color: darkslategray;
     text-align: left;
@@ -50,6 +54,3 @@ td {
     text-align: left;
 }
 
-.linkDiv {
-    margin: 10px
-}

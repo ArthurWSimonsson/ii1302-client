@@ -1,4 +1,3 @@
 export const messageConstants = {
-    WELCOME: 'GET_WELCOME',
-    POSTS: 'GET_POSTS'   
+    WELCOME: 'GET_WELCOME'
 };
