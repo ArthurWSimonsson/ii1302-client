@@ -5,7 +5,7 @@ export function user(state = {}, action) {
     switch(action.type){
         case userConstants.LOG_IN:
             return {
-                user : action.user.Pt.Ad
+                user : action.user
             }
         case userConstants.LOG_OUT:
             return {};
