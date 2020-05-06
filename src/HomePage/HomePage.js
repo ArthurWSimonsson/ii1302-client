@@ -9,6 +9,8 @@ import '../Common.css';
 function HomePage() {
 
     const welcomeMessage = useSelector(state => state.message);
+    const visitorFlag = useSelector(state => state.header.visitor);
+
     const user = useSelector(state => state.user);
     const dispatch = useDispatch();
 
@@ -18,7 +20,12 @@ function HomePage() {
     }, []);
 
     // Office hours are 9:00 to 15:00.
-      
+    var path;
+    
+    if (visitorFlag)
+        path = "/visitor/nologin"
+    else
+        path = "/visitor"
 
     return(
     <div className = "homePage">
@@ -29,7 +36,7 @@ function HomePage() {
             <p className = "messageBoxText">{welcomeMessage.message}</p>
         </div>
         <div className = "linkDiv">
-            <Link className = "button" to="/visitor">Leave a message</Link>
+            <Link className = "button" to={`${path}`}>Leave a message</Link>
         </div>
     </div>
     )

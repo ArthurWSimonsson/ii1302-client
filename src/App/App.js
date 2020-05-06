@@ -14,8 +14,8 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>        
-        <Route path="/" exact component={HomePage} />
-        <Route path="/visitor" component={Visitor}/>
+        <Route path={["/", "/nologin"]}  exact component={HomePage} />
+        <Route path={["/visitor", "/visitor/nologin"]} component={Visitor}/>
         <PrivateRoute path="/edit" component={EditPage}/>
       </Switch>  
     </div>

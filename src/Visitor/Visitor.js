@@ -8,17 +8,18 @@ import './Visitor.css';
 import '../Common.css';
 
 // {
-//     "id" : "testing",
 //     "author": "Test T",
 //     "date": "2020/10/10 10:00:00",
 //     "title": "Besök",
 //     "message": "hej hej hej",
-//     "read": true
+//     "read": false
 // }
   
 
 function Visitor (props) {
     // const [name, setName] = useState();
+    const visitorFlag = useSelector(state => state.header.visitor);
+
 
 
     const handleSubmit = (evt) => {
@@ -36,7 +37,7 @@ function Visitor (props) {
         // console.log('evt', evt.target.message.value)
         // console.log('test', messageDoc)
 
-        props.history.push('/')
+        props.history.push(`${path}`)
         // setName(evt)
         // setName(evt)
         // console.log(name)
@@ -50,6 +51,12 @@ function Visitor (props) {
         // console.log('prop ',props)
         // props.history.push('/')
     // }
+    var path;
+
+    if (visitorFlag)
+        path = "/nologin";
+    else
+        path = "/";
 
     return (
         <div className = "visitorMainDiv">        
@@ -60,7 +67,6 @@ function Visitor (props) {
                     <input className = 'titleInput' name = 'title' type = 'text' placeholder='Title' required></input>
                     <textarea className = 'messageInput' name = 'message' type = 'text' placeholder='Please leave a message.' required></textarea>
                     <input className = "button" type='submit' value='Submit'></input>
-                    {/* <Link to = '/' className = "button" type ='submit'>Submit</Link> */}
                 </form>
             </div>
 
