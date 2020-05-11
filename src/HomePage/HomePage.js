@@ -19,13 +19,14 @@ function HomePage() {
         dispatch(messageActions.welcomeMessage());
     }, []);
 
-    // Office hours are 9:00 to 15:00.
-    var path;
+    // var path;
     
-    if (visitorFlag)
-        path = "/visitor/nologin"
-    else
-        path = "/visitor"
+    // if (visitorFlag)
+    //     path = "/visitor/nologin"
+    // else
+    //     path = "/visitor"
+
+    var path = visitorFlag ? "/visitor/nologin" : "/visitor";
 
     return(
     <div className = "homePage">
@@ -33,7 +34,7 @@ function HomePage() {
             <p className = "title">Welcome</p>
         </div>
         <div className = "messageBox">
-            <p className = "messageBoxText">{welcomeMessage.message}</p>
+            <p data-testid="message-p" className = "messageBoxText">{welcomeMessage.message}</p>
         </div>
         <div className = "linkDiv">
             <Link className = "button" to={`${path}`}>Leave a message</Link>

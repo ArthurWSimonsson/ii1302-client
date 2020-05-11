@@ -17,7 +17,6 @@ import '../Common.css';
   
 
 function Visitor (props) {
-    // const [name, setName] = useState();
     const visitorFlag = useSelector(state => state.header.visitor);
 
 
@@ -32,38 +31,19 @@ function Visitor (props) {
         messageDoc.message = evt.target.message.value;
         messageDoc.read = false;
         messageService.leaveMessage(messageDoc)
-        // const data = new FormData(evt.target);
-        // console.log('evt', evt.target[2].value)
-        // console.log('evt', evt.target.message.value)
-        // console.log('test', messageDoc)
+
+        var path = visitorFlag ? "/nologin" : "/";
 
         props.history.push(`${path}`)
-        // setName(evt)
-        // setName(evt)
-        // console.log(name)
-        // evt.preventDefault();
-        // alert(`Submitting Name ${name}`)
     }
 
-    // const handleChange = (evt) => {
-        // console.log('name', name)
-        // setName(evt)
-        // console.log('prop ',props)
-        // props.history.push('/')
-    // }
-    var path;
-
-    if (visitorFlag)
-        path = "/nologin";
-    else
-        path = "/";
 
     return (
         <div className = "visitorMainDiv">        
             <div className = "formDiv">
                 <form className = 'leaveMessageForm' onSubmit={handleSubmit}>
                     <p className = "title">Leave a message</p>
-                    <input className = 'authorInput' name = 'author' type = 'text' placeholder='Author' required></input>
+                    <input data-testid="author-input" className = 'authorInput' name = 'author' type = 'text' placeholder='Author' required></input>
                     <input className = 'titleInput' name = 'title' type = 'text' placeholder='Title' required></input>
                     <textarea className = 'messageInput' name = 'message' type = 'text' placeholder='Please leave a message.' required></textarea>
                     <input className = "button" type='submit' value='Submit'></input>

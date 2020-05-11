@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
     user,
     header
 });
-  
+
 //   = message;
 
 export default rootReducer;

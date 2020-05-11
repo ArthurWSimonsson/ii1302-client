@@ -16,7 +16,7 @@ function EditPage(props) {
         var messageDoc = {};
 
         messageDoc.message = evt.target.message.value;
-        messageService.changeWelcome(messageDoc).then(() => {return dispatch(messageActions.welcomeMessage())});
+        messageService.changeWelcome(messageDoc).then(() => {dispatch(messageActions.welcomeMessage())});
 
         props.history.push('/')
     }
