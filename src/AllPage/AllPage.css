@@ -1,6 +1,7 @@
 p {
     color: white;
     padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
     font-size: 20px;
     margin: 5px;
@@ -19,21 +20,9 @@ p {
     font-size: 25px;
 }
 
-.button {
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    background-color: darkcyan;
-    text-decoration: none;
-    padding: 5px;
-    border: solid;
-    border-width: thin;
-    border-radius: 5px;
-}
-
 table{
     background-color: white;
-    width: 500px;
+    width: 100%;
     text-align: flex-start;
     border: solid;
     border-width: thin;
@@ -45,12 +34,44 @@ tr:hover td {
 }
 
 th {
-    background-color: darkslategray;
+    background-color: rgb(2, 99, 99);
     text-align: left;
 }
 
 td {
-    background-color: darkcyan;
     text-align: left;
 }
 
+.thText {
+    float: left;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 40%;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.arrow-down:after {
+    float:right;
+    content: "";
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+  button {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: darkcyan;
+    text-decoration: none;
+    padding: 5px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+    text-align: left;
+}

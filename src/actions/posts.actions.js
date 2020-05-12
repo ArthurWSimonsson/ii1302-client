@@ -3,7 +3,8 @@ import { postsService } from '../services';
 
 export const postsActions = {
     getPosts,
-    getPost
+    getPost,
+    sortPosts
 };
 
 function getPosts(){
@@ -28,4 +29,9 @@ function getPost(id){
                 },
             )
     };
+}
+
+function sortPosts(key){
+    //console.log('mes',key);
+    return{type: postsConstants.SORT_POST, key};
 }

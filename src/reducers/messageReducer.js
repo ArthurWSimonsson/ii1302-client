@@ -1,7 +1,7 @@
 import { messageService } from '../services';
 import { messageConstants } from '../constants';
 
-let messageFetch = messageService.getWelcome()
+// let messageFetch = messageService.getWelcome()
 // const initialeState = messageFetch
 
 export function message(state = {}, action) {    
