@@ -11,7 +11,7 @@ function welcomeMessage () {
 
     // messageService.getWelcome()
     return dispatch => {
-        messageService.getWelcome()
+        return messageService.getWelcome()
             .then(
                 message => { 
                     // console.log('mes', message);

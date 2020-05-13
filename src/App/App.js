@@ -9,6 +9,11 @@ import {AllPage} from '../AllPage'
 import {EditPage} from '../EditPage'
 import {PrivateRoute } from '../Components';
 
+/**
+ * @author Arthur Simonsson
+ * @author Botan Cosar
+ * @description the main function for the application.
+ */
 function App() {
   return (
     <div className="App">
@@ -16,8 +21,8 @@ function App() {
       <Switch>        
         <Route path={["/", "/nologin"]}  exact component={HomePage} />
         <Route path={["/visitor", "/visitor/nologin"]} component={Visitor}/>
-        <Route path="/all" component={AllPage} />
-        <Route path="/entry" component={Entry} />
+        <PrivateRoute path="/all" component={AllPage} />
+        <PrivateRoute path="/entry" component={Entry} />
         <PrivateRoute path="/edit" component={EditPage}/>
       </Switch>  
     </div>

@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     posts,
     header
 });
-  
+
 //   = message;
 
 export default rootReducer;

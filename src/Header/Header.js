@@ -24,6 +24,7 @@ function Header() {
 
     const responseGoogle = (response) => {
         dispatch(userActions.logIn(response));
+        console.log('repsonse', response)
     }
 
     const logout = () => {

@@ -5,7 +5,12 @@ import './AllPage.css';
 import '../Common.css';
 import { postsService } from '../services';
 
-
+/**
+ * @author Botan Cosar
+ * @description returns the full log of messages that have been entered into the database.
+ * 
+ * @param {*} props used to access the entry page.
+ */
 function AllPage(props) {
 
     const posts = useSelector(state => state.posts.items);
@@ -18,6 +23,12 @@ function AllPage(props) {
         dispatch(postsActions.getPosts());
     }, []);
 
+    /**
+     * @author Botan Cosar
+     * @description fetches an entry page corresponding to the id of the row that was clicked.
+     * 
+     * @param {*} id the id of the row.
+     */
     const handleRowClick=(id)=>{
         props.history.push({
             pathname: "/entry",
@@ -25,19 +36,45 @@ function AllPage(props) {
         });
     }
 
+    /**
+     * @author Botan Cosar
+     * @description handles calls made on clicking the header of the table.
+     * 
+     * @param {*} e the click event
+     * @param {*} sortKey used by the onSort function.
+     */
     const handleHeaderClick=(e,sortKey)=>{
         //e.target.className=e.target.className==='sortDown' ?'sortUp':'sortDown';
         onSort(sortKey);
     }
 
+    /**
+     * @author Botan Cosar
+     * @description deletes an entry from the database corresponding to the row of the delete button that was pressed.
+     * 
+     * @param {*} id the id of the row whose delete button was clicked.
+     */
     const onDelete=(id)=>{
         postsService.deleteEntry(id).then(() => {return dispatch(postsActions.getPosts())});
     }
 
+    /**
+     * @author Botan Cosar
+     * @description dispatches the name of the column to sort by to the redux store.
+     * 
+     * @param {*} sortKey the name of the column to sort.
+     */
     const onSort=(sortKey)=>{
         dispatch(postsActions.sortPosts(sortKey));
     }
 
+    /**
+     * @author Botan Cosar
+     * @description uses the sortKey in the redux store to decide how the table shall be sorted.
+     * 
+     * @param {*} a an item to compare with another for sorting.
+     * @param {*} b an item to compare with another for sorting.
+     */
     const sorter=(a,b)=>{
         if(sortKey==='key'){
             return a[sortKey] > b[sortKey] ? sortDirection : -sortDirection
@@ -47,10 +84,14 @@ function AllPage(props) {
         }
     }
     
+    /**
+     * @author Botan Cosar
+     * @description maps the posts in the database to rows in the table.
+     */
     const postItems=posts
         .sort((a, b) => sorter(a,b))
         .map(posts=>(    
-            <tr key={posts.id}  
+            <tr data-testid='data' key={posts.id}  
             style={posts.value.read ? {
                     backgroundColor:"darkslategrey"
                 }:{
