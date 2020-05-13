@@ -1,6 +1,10 @@
 import { userConstants } from '../constants';
 // import { messageService } from '../services';
 
+/* Author Arthur Simonsson */
+
+/* Redux actions related to login/logout of a user. */
+
 export const userActions = {
     logIn,
     logOut

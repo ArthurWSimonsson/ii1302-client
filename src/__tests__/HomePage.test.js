@@ -7,6 +7,8 @@ import { store } from '../helper';
 import {HomePage} from '../HomePage'
 import { BrowserRouter } from 'react-router-dom'
 
+/* Author Arthur Simonsson */
+
 /* Testing components loaded with redux store */
 describe('HomePage',() => {
 

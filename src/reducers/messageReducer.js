@@ -1,9 +1,9 @@
 import { messageService } from '../services';
 import { messageConstants } from '../constants';
 
+/* Author Arthur Simonsson. */
 
-// let messageFetch = messageService.getWelcome()
-// const initialeState = messageFetch
+/* Reducers for the welcome message */
 
 export function message(state = {}, action) {    
     switch(action.type){

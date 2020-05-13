@@ -5,6 +5,12 @@ import thunk from 'redux-thunk'
 import fetchMock from 'fetch-mock'
 import expect from 'expect' 
 
+/* Author Arthur Simonsson */
+
+/* Here redux actions are tested. First a mocked store is created. When an action is called that action is then 
+   compared to a template with desired structur. Test passes if equal. */
+
+
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 

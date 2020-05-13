@@ -1,5 +1,8 @@
 import { userConstants } from '../constants';
 
+/* Author Arthur Simonsson. */
+
+/* Reducers for the user */
 
 export function user(state = {}, action) {    
     switch(action.type){

@@ -3,6 +3,10 @@ import {user} from '../reducers/userReducer';
 import {header} from '../reducers/headerReducer';
 import {message} from '../reducers/messageReducer';
 
+/* Author Arthur Simonsson */
+
+/* Here redux reducers are tested. When an action is dispatched the store should contain desired information. */
+
 
 describe('user reducer', () => {
     it('should return the initial state', () => {

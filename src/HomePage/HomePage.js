@@ -5,6 +5,11 @@ import { messageActions } from '../actions';
 import './HomePage.css';
 import '../Common.css';
 
+/* Author Arthur Simonsson. */
+
+/* HomePage, shows the same message as the screen of the door communicator. Both linked to the same database entry.
+   If accessed as a visitor the only possibility is to continue to the 'Visitor' page. */
+
 
 function HomePage() {
 
@@ -18,13 +23,6 @@ function HomePage() {
     useEffect(() => {
         dispatch(messageActions.welcomeMessage());
     }, []);
-
-    // var path;
-    
-    // if (visitorFlag)
-    //     path = "/visitor/nologin"
-    // else
-    //     path = "/visitor"
 
     var path = visitorFlag ? "/visitor/nologin" : "/visitor";
 

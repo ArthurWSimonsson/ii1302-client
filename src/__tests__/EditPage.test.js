@@ -7,6 +7,7 @@ import { store } from '../helper';
 import {EditPage} from '../EditPage'
 import { BrowserRouter } from 'react-router-dom'
 
+/* Author Arthur Simonsson */
 
 /* Testing components loaded with redux store */
 describe('EditPage',() => {

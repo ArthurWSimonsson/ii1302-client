@@ -6,6 +6,10 @@ import { messageService } from '../services';
 import './EditPage.css';
 import '../Common.css';
 
+/* Author Arthur Simonsson. */
+
+/* Page where the message shown on the screen of the door communicator can be edited. */
+
 function EditPage(props) {
 
     const welcomeMessage = useSelector(state => state.message);
