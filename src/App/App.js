@@ -12,7 +12,7 @@ import {PrivateRoute } from '../Components';
 /**
  * @author Arthur Simonsson
  * @author Botan Cosar
- * @description the main function for the application.
+ * @description Main structure of the application. A header which is constantly shown and different paths depending on the url.
  */
 function App() {
   return (

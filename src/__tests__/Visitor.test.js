@@ -7,8 +7,10 @@ import { store } from '../helper';
 import {Visitor} from '../Visitor'
 import { BrowserRouter } from 'react-router-dom'
 
-
-/* Testing components loaded with redux store */
+/**
+ * @author Arthur Simonsson
+ * @description Testing components loaded with redux store.
+ */
 console.log(Visitor.handleSubmit)
 Visitor.handleSubmit = jest.fn();
 

@@ -1,6 +1,10 @@
 import { messageConstants } from '../constants';
 import { messageService } from '../services';
 
+/**
+ * @author Arthur Simonsson
+ * @description Redux actions related to the main message.
+ */
 export const messageActions = {
     welcomeMessage
 };

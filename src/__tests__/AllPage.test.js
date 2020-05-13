@@ -7,6 +7,7 @@ import {AllPage} from '../AllPage';
 
 /**
  * @author Botan Cosar
+ * @description Testing components loaded with redux store.
  */
 describe('AllPage',()=>{
 

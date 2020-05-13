@@ -1,6 +1,9 @@
 import { headerConstants } from '../constants';
-// import { messageService } from '../services';
 
+/**
+ * @author Arthur Simonsson
+ * @description Redux action related to the application's header.
+ */
 export const headerActions = {
     noHeader
 };

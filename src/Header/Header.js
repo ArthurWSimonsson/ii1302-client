@@ -6,12 +6,14 @@ import { headerActions } from '../actions';
 import '../Common.css';
 import './Header.css';
 import { GoogleLogout, GoogleLogin } from 'react-google-login';
-// import { useGoogleLogin } from 'react-google-login'
- 
 
-// let user = false;
-
-
+/**
+ * @author Arthur Simonsson
+ * @author Botan Cosar
+ * @description Header of the application. If a visitor scans the QR code then the url has '/nologin' in it,
+ * then a blank header will be shown. Otherwise it is possible to log in and gain access to 
+ * admin priviledges.
+ */
 function Header() {
     const user = useSelector(state => state.user);
     const visitorFlag = useSelector(state => state.header.visitor)

@@ -1,10 +1,13 @@
 import { messageService } from '../services';
 import { messageConstants } from '../constants';
 
-
-// let messageFetch = messageService.getWelcome()
-// const initialeState = messageFetch
-
+/**
+ * @author Arthur Simonsson
+ * @description Reducers for the welcome message
+ * 
+ * @param {*} state the state of the redux store.
+ * @param {*} action the action that was dispatched.
+ */
 export function message(state = {}, action) {    
     switch(action.type){
         case messageConstants.WELCOME:

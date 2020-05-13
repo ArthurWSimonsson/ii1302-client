@@ -4,15 +4,14 @@ export const messageService = {
     changeWelcome
 };
 
-// const myHeaders = new Headers({
-//     "Access-Control-Allow-Origin": "*",
-//     "Content-Type": "application/json"
-//   });
-// {headers: myHeaders}
+/**
+ * Services (async calls) to send requests to the express server and fetch relevant information.
+ */
 
-//   https://ii1302-server.eu-gb.mybluemix.net/api/message/welcome
-//   https://ii1302-door-com.eu-gb.mybluemix.net/api/message/welcome
-
+/**
+ * @author Arthur Simonsson
+ * @description Gets the main message
+ */
 function getWelcome() {
     return fetch('https://ii1302-server.eu-gb.mybluemix.net/api/message/welcome')
     .then((response) => {
@@ -23,6 +22,12 @@ function getWelcome() {
     });
 }
 
+/**
+ * @author Arthur Simonsson
+ * @description Changes main message
+ * 
+ * @param {*} message 
+ */
 function changeWelcome(message) {
     // console.log('service', message)
     const requestOptions = {
@@ -45,6 +50,12 @@ function changeWelcome(message) {
     });
 }
 
+/**
+ * @author Arthur Simonsson
+ * @description Leaves a message to the officer holder
+ * 
+ * @param {*} message 
+ */
 function leaveMessage(message) {
     // console.log('service', message)
     const requestOptions = {

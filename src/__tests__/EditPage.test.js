@@ -7,8 +7,10 @@ import { store } from '../helper';
 import {EditPage} from '../EditPage'
 import { BrowserRouter } from 'react-router-dom'
 
-
-/* Testing components loaded with redux store */
+/**
+ * @author Arthur Simonsson
+ * @description Testing components loaded with redux store.
+ */
 describe('EditPage',() => {
     it('contains title and functioning input', () => {
     const utils = render(

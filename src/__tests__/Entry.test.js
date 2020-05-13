@@ -7,6 +7,7 @@ import {Entry} from '../Entry';
 
 /**
  * @author Botan Cosar
+ * @description Testing components loaded with redux store.
  */
 describe('Entry',() => {
     it('accepts parameter and loads correctly', () => {

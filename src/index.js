@@ -7,6 +7,11 @@ import { store } from './helper';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+/**
+ * @author Arthur Simonsson
+ * @description Main DOM rendering. Provider holds the redux store for a React-Redux application.
+   BrowserRouter is needed to separate the application's components according to the url.
+ */
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

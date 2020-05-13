@@ -4,7 +4,13 @@ import {header} from '../reducers/headerReducer';
 import {message} from '../reducers/messageReducer';
 import {posts} from '../reducers/postsReducer';
 
+/**
+ * Here redux reducers are tested. When an action is dispatched the store should contain desired information.
+ */
 
+/**
+ * @author Arthur Simonsson
+ */
 describe('user reducer', () => {
     it('should return the initial state', () => {
       expect(user(undefined, {})).toEqual(
@@ -36,6 +42,9 @@ describe('user reducer', () => {
     })
 })
 
+/**
+ * @author Arthur Simonsson
+ */
 describe('header reducer', () => {
     it('should return the initial state', () => {
       expect(header(undefined, {})).toEqual(
@@ -58,7 +67,9 @@ describe('header reducer', () => {
 
 })
 
-
+/**
+ * @author Arthur Simonsson
+ */
 describe('message reducer', () => {
     it('should return the initial state', () => {
       expect(message(undefined, {})).toEqual(

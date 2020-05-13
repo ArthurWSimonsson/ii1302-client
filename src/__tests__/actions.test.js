@@ -5,9 +5,17 @@ import thunk from 'redux-thunk'
 import fetchMock from 'fetch-mock'
 import expect from 'expect' 
 
+/**
+ * Here redux actions are tested. First a mocked store is created. When an action is called that action is then 
+ * compared to a template with desired structur. Test passes if equal.
+ */
+
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
+/**
+ * @author Arthur Simonsson
+ */
 describe('User actions', () => {
     it('should log in a user', () => {
         const user = 'user'
@@ -26,6 +34,9 @@ describe('User actions', () => {
       })
 })
 
+/**
+ * @author Arthur Simonsson
+ */
 describe('Header actions', () => {
     it('should signal visitor header', () => {
         const expectedAction = {
@@ -35,6 +46,9 @@ describe('Header actions', () => {
     })
 })
 
+/**
+ * @author Arthur Simonsson
+ */
 describe('Message actions', () => {
     afterEach(() => {
         fetchMock.restore()
