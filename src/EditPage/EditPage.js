@@ -30,7 +30,7 @@ function EditPage(props) {
     <div className = "EditPageMainDiv">
         <form className = 'leaveMessageForm' onSubmit={handleSubmit}>
             <p className = "title">Edit home message</p>
-            <textarea className = 'newWelcomeInput' name = 'message' type = 'text' placeholder='Leave new home screen message.' required></textarea>
+            <textarea className = 'newWelcomeInput' name = 'message' type = 'text' placeholder='Leave new home screen message (max 70 characters).' maxLength = '70' required></textarea>
             <input className = "button" type='submit' value='Change'></input>
             {/* <Link to = '/' className = "button" type ='submit'>Submit</Link> */}
         </form>
