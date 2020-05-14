@@ -22,7 +22,7 @@ describe('EditPage',() => {
         )
     expect(utils.getByText('Edit home message')).toBeTruthy();
 
-    let input = utils.getByPlaceholderText('Leave new home screen message.')
+    let input = utils.getByPlaceholderText('Leave new home screen message (max 70 characters).')
 
     fireEvent.change(input, { target: { value: 'Message' } })
     expect(input.value).toBe('Message')
