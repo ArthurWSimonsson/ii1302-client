@@ -56,7 +56,7 @@ function Header() {
             
             <Link to = '/' className = "logInButton" >Home</Link>
             <Link to = '/all' className = "logInButton" >All</Link>
-            <Link to = '/edit/choice' className = "logInButton" >Edit</Link>
+            <Link to = '/edit' className = "logInButton" >Edit</Link>
             <GoogleLogout
                 clientId="106553078705-vtn4pu3rkukcnr7bu0bkbre18l2s5la6.apps.googleusercontent.com"
                 buttonText="Logout"
